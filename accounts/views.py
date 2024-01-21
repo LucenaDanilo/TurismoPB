@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 # Create your views here.
 class NossoForm(UserCreationForm):
     email = forms.EmailField(label="Email", max_length=254)
-    lastname = forms.CharField(label="Sobrenome")
+    lastname = forms.CharField(label="lastname")
 
     class Meta:
         model = User
@@ -16,6 +16,7 @@ class NossoForm(UserCreationForm):
     def save(self, commit=True):
         user = super(NossoForm, self).save(commit=False)
         user.email = self.cleaned_data["email"]
+        user.lastname = self.cleaned_data["lastname"]
         if commit:
             user.save()
         return user
