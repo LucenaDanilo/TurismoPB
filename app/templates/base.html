@@ -1,8 +1,8 @@
-
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'app/css/style.css' %}">
         <!-- meta data -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,36 +17,36 @@
     
         <!-- For favicon png -->
         
-        <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+        <link rel="shortcut icon" type="image/icon" href="{% static 'app/logo/favicon.png' %}"/>
        
         <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'app/css/font-awesome.min.css' %}" />
 
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'app/css/font-awesome.min.css' %}">
     
         <!--linear icon css-->
-        <link rel="stylesheet" href="assets/css/linearicons.css">
+        <link rel="stylesheet" href="{% static 'app/css/linearicons.css' %}">
     
         <!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="{% static 'app/css/animate.css' %}">
     
         <!--flaticon.css-->
-        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="{% static 'app/css/flaticon.css' %}">
     
         <!--slick.css-->
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/slick-theme.css">
+        <link rel="stylesheet" href="{% static 'app/css/slick.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/slick-theme.css' %}">
         
         <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}">
         
         <!-- bootsnav -->
-        <link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        <link rel="stylesheet" type="text/css" href="{% static 'app/css/bootsnav.css' %}">
         
         <!--style.css-->
-        <link rel="stylesheet" href="{% static 'app/css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'app/css/style.css' %}">
         <!--responsive.css-->
-        <link rel="stylesheet" href="{% static 'app/css/responsive.css' %}" />
+        <!-- <link rel="stylesheet" href="{% static 'app/css/responsive.css' %}" /> -->
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -117,10 +117,59 @@
             {% endblock %}
         </main>
     
-        <footer>
-            <h5>footer</h5>
 
-        </footer>
+
+
+
+    
+        <footer id="footer"  class="footer">
+            <div class="container">
+                <div class="footer-menu">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="navbar-header">
+                                <a class="navbar-brand" href="index.html">list<span>race</span></a>
+                            </div><!--/.navbar-header-->
+                            </div>
+                            <div class="col-sm-9">
+                                <ul class="footer-menu-item">
+                                <li class="scroll"><a href="#works">Como Funciona</a></li>
+                                <li class="scroll"><a href="#explore">explorar</a></li>
+                                <li class="scroll"><a href="#contact">contato</a></li>
+                                <li class=" scroll"><a href="#contact">Minha conta</a></li>
+                            </ul><!--/.nav -->
+                            </div>
+                    </div>
+                </div>
+                <div class="hm-footer-copyright">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <p>
+                                &copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+                            </p><!--/p-->
+                        </div>
+                        <div class="col-sm-7">
+                            <!-- <div class="footer-social">
+                                <span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+                                <a href="#"><i class="fa fa-facebook"></i></a>	
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                </div><!--/.hm-footer-copyright-->
+            </div><!--/.container-->
+
+            <div id="scroll-Top">
+                <div class="return-to-top">
+                    <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+                </div>
+                
+            </div><!--/.scroll-Top-->
+
+    </footer>
     </body>
 
 
