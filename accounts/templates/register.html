@@ -49,6 +49,16 @@
                 <ion-icon class="show-hide" name="eye-outline"></ion-icon>
               </div>
             </div>
+            <div class="password">
+              <label for="password">Confirme sua senha</label>
+              <div class="sec-2">
+                {{ user_form.password2.erros }}
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                {{ user_form.password2 }}                  
+                <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+              </div>
+            </div>
+
             <button class="login">Registrar </button>
             <div class="footer"><span>Login</span><span>Esqueceu sua senha?</span></div>
         </div>
