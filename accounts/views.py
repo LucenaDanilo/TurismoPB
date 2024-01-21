@@ -7,33 +7,35 @@ from django.contrib.auth.models import User
 # Create your views here.
 class NossoForm(UserCreationForm):
     email = forms.EmailField(label="Email", max_length=254)
-    lastname = forms.CharField(label="lastname")
 
     class Meta:
         model = User
-        fields = ("username", "email", "lastname",)
+        fields = ("username", "email",)
 
     def save(self, commit=True):
         user = super(NossoForm, self).save(commit=False)
         user.email = self.cleaned_data["email"]
-        user.lastname = self.cleaned_data["lastname"]
         if commit:
             user.save()
         return user
     
-
 def login_view(request):
 
     if request.method == 'POST':
         username = request.POST["username"]
         password = request.POST["password"]
 
-        user = authenticate(request, username = username, password = password)
+        print(username, password)
 
+        user = authenticate(request, username = username, password = password)
+        print(user)
         if (user is not None):
+            print('vasco')
             login(request, user)
+            print(user.is_authenticated)
             return redirect('base_test_view')
         else:
+            print('js')
             login_form = AuthenticationForm()   
     else: # get
         login_form = AuthenticationForm()   
@@ -46,7 +48,6 @@ def register_view(request):
 
     if request.method == 'POST':
         user_form = NossoForm(request.POST)
-        print(user_form)
         if user_form.is_valid():
             user_form.save()
             

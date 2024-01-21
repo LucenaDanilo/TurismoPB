@@ -36,7 +36,7 @@
                   <polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" points="-50,-50 -50,50 50,50 50,-50 "></polygon>
                 </g>
               </svg>
-              <div class="email">
+              <div class="email" id="first_box">
                 <label for="email">Endereço de E-mail</label>
                 <div class="sec-2">
                   {{login_form.username.erros}}
@@ -49,25 +49,17 @@
                 <div class="sec-2">
                   {{login_form.password.erros}}
                   <ion-icon name="lock-closed-outline"></ion-icon>
-                  
                   {{login_form.password}}
                   
                   <ion-icon class="show-hide" name="eye-outline"></ion-icon>
                 </div>
               </div>
               <button class="login">Entrar </button>
-              <div class="footer"><span>Registrar</span><span>Esqueceu sua senha?</span></div>
+              <div class="footer"><a href="{% url 'register_view' %}"><span>Registrar</span>/<a/><span>Esqueceu sua senha?</span></div>
             </div>
 
-          <main>
-              {% block content %}
-              {% endblock %}
-          </main>
-      
+  
         </form>
       </body>
-    
-
-
 </html>
 

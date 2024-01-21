@@ -135,14 +135,6 @@ button {
   cursor: pointer;
 }
 
-.nome {
-  width: 43%;
-}
-
-.sobrenome {
-  width: 43%;
-}
-
 .input_name {
   border: none;
 }
@@ -158,3 +150,14 @@ button {
   width: 50%;
 }
 
+#inputs {
+  display: flex;
+  flex-direction:column;
+  justify-items: flex-start;
+  align-items: auto; /* Opcional: centralizar horizontalmente os campos */
+}
+
+#inputs div {
+  margin-bottom: 35px; /* Espaçamento entre os campos, ajuste conforme necessário */
+  height: 20%;
+}
