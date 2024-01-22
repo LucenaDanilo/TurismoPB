@@ -13,11 +13,13 @@ class Location(models.Model):
     latitude = models.CharField(max_length=200)
     longitude = models.CharField(max_length=200)
     city = models.ForeignKey(City, on_delete=models.PROTECT, related_name='city')
+     
 
 class Contact(models.Model):
     id = models.AutoField(primary_key=True)
     telephone = models.CharField(max_length=200)
     email = models.CharField(max_length=200, blank=True, null=True)
+    
 
 class Local(models.Model):
     id = models.AutoField(primary_key=True)
