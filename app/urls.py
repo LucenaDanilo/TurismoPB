@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from lugares.views import base_test_view, landing_page_view
 from accounts.views import login_view,register_view
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', landing_page_view, name = 'landing_page_view'),
@@ -25,4 +27,4 @@ urlpatterns = [
     path('base/',base_test_view,name='base_test_view'),
     path('login/',login_view, name='login_view'),
     path('register/',register_view, name='register_view')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

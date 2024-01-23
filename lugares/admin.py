@@ -15,7 +15,7 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = ('email',)
 
 class LocalAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category', 'location')
+    list_display = ('name', 'category', 'location', 'contact')
     search_fields = ('name', 'category', 'location')
 
 admin.site.register(City, CityAdmin)
