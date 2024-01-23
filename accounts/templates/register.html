@@ -1,0 +1,57 @@
+{% load static %}
+
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/style_login.css' %}">
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="screen-1">
+          <div class='logo_area'>
+            <img src="{% static 'app/images/carrefourlogo.jpeg' %}" alt="logo" class="logo-image">
+          </div>
+        <div id="inputs">
+          <div class="email">
+            <label for="email">Username</label>
+            <div class="sec-2">
+              {{ user_form.username.erros }}
+              <ion-icon name="mail-outline"></ion-icon>
+              {{ user_form.username }}              
+            </div>
+          </div>
+            <div class="email">
+              <label for="email">Endereço de E-mail</label>
+              <div class="sec-2">
+                {{ user_form.email.erros }}
+                <ion-icon name="mail-outline"></ion-icon>
+                {{ user_form.email }}              
+              </div>
+            </div>
+            <div class="password">
+              <label for="password">Senha</label>
+              <div class="sec-2">
+                {{ user_form.password1.erros }}
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                {{ user_form.password1 }}                  
+                <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="password">
+              <label for="password">Confirme sua senha</label>
+              <div class="sec-2">
+                {{ user_form.password2.erros }}
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                {{ user_form.password2 }}                  
+                <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+            <button class="login">Registrar </button>
+            <div class="footer"><span>Login</span><span>Esqueceu sua senha?</span></div>
+        </div>
+
+    </form>
+
+  {% endblock  %}

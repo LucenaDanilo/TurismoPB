@@ -1,0 +1,163 @@
+* {
+  font-family: "Poppins";
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dde5f4;
+  height: 100vh;
+}
+
+.screen-1 {
+  background: #f1f7fe;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0 0 2em #e6e9f9;
+  gap: 2em;
+}
+
+.screen-1 .logo {
+  margin-top: -3em;
+}
+
+.screen-1 .email,
+.nome,
+.sobrenome {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -1.5em;
+  border: none;
+}
+
+.screen-1 .email,
+.nome,
+.sobrenome input {
+  outline: none;
+  border: none;
+}
+
+.screen-1 .email,
+input::-moz-placeholder {
+  font-size: 0.9em;
+  border: none;
+}
+
+.screen-1 .email,
+.nome input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+.screen-1 .password {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+}
+
+.screen-1 .password input {
+  outline: none;
+  border: none;
+}
+
+.screen-1 .password input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+.screen-1 .password input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+.screen-1 .password input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+.screen-1 .password ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+
+.screen-1 .password .show-hide {
+  margin-right: -5em;
+}
+
+.screen-1 .login {
+  padding: 1em;
+  background: #3e4684;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.screen-1 .footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7em;
+  color: #5e5e5e;
+  gap: 14em;
+  padding-bottom: 10em;
+}
+
+.screen-1 .footer span {
+  cursor: pointer;
+}
+
+.nome_sobrenome {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.input_name {
+  border: none;
+}
+
+.logo_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.logo-image {
+  width: 50%;
+}
+
+#inputs {
+  display: flex;
+  flex-direction:column;
+  justify-items: flex-start;
+  align-items: auto; /* Opcional: centralizar horizontalmente os campos */
+}
+
+#inputs div {
+  margin-bottom: 35px; /* Espaçamento entre os campos, ajuste conforme necessário */
+  height: 20%;
+}
