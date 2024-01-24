@@ -60,24 +60,45 @@
 
     <body>
         {% if not user.is_authenticated %}
-        <header id="header-top" class="header-top">
-			<ul>    
-				<li class="head-responsive-right pull-right">
-					<div class="header-top-right">
-						<ul>
-							<li class="header-top-contact">
-								<a href="{% url 'login_view' %}">Entrar</a>
-							</li>
-							<li class="header-top-contact">
-								<a href="{% url 'register_view' %}">Registrar</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-					
-		</header><!--/.header-top-->
-        {% endif %}
+    <header id="header-top" class="header-top">
+        <ul>    
+            <li class="head-responsive-right pull-right">
+                <div class="header-top-right">
+                    <ul>
+                        <li class="header-top-contact">
+                            <a href="{% url 'login_view' %}">Entrar</a>
+                        </li>
+                        <li class="header-top-contact">
+                            <a href="{% url 'register_view' %}">Registrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header><!--/.header-top-->
+    {% else %}
+    <header id="header-top" class="header-top">
+        <ul>    
+            <li class="head-responsive-right pull-right">
+                <div class="header-top-right">
+                    <ul>
+                        <!-- Aqui você pode colocar links para perfis de usuários ou sair -->
+                        <li class="header-top-contact">
+                            <a href="{% url 'lugares_view' %}">Perfil</a>
+                        </li>
+                        <li class="header-top-contact">
+                            <a href="{% url 'logout_view' %}">Sair</a>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header><!--/.header-top-->
+{% endif %}
+
+
+        
 
         <section class="top-area">
 			<div class="header-area">

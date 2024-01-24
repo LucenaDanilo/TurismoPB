@@ -23,9 +23,9 @@
                         </div>
                     </div>
                     <div class="single-welcome-hero-form">
-                        <h3>location</h3>
+                        <h3>Cidade</h3>
                         <form method="GET" action="{% url 'cities_view' %}">
-                            <input type="text" name="search" placeholder="Ex: london, newyork, rome" />
+                            <input type="text" name="search" placeholder="Ex: Joao Pessoa, Campina grande" />
                         </form>
                         <div class="welcome-hero-form-icon">
                             <i class="flaticon-gps-fixed-indicator"></i>
@@ -68,7 +68,7 @@
                             <div class="single-list-topics-icon">
                                 <i class="flaticon-travel"></i>
                             </div>
-                            <h2><a href="#">destination</a></h2>
+                            <h2><a href="#">Destinos</a></h2>
                             <p>214 listings</p>
                         </div>
                     </li>
@@ -77,7 +77,7 @@
                             <div class="single-list-topics-icon">
                                 <i class="flaticon-building"></i>
                             </div>
-                            <h2><a href="#">hotels</a></h2>
+                            <h2><a href="#">Hoteis</a></h2>
                             <p>185 listings</p>
                         </div>
                     </li>
@@ -86,7 +86,7 @@
                             <div class="single-list-topics-icon">
                                 <i class="flaticon-pills"></i>
                             </div>
-                            <h2><a href="#">healthcaree</a></h2>
+                            <h2><a href="#">Cuidados</a></h2>
                             <p>200 listings</p>
                         </div>
                     </li>
@@ -95,7 +95,7 @@
                             <div class="single-list-topics-icon">
                                 <i class="flaticon-transport"></i>
                             </div>
-                            <h2><a href="#">automotion</a></h2>
+                            <h2><a href="#">Autos</a></h2>
                             <p>120 listings</p>
                         </div>
                     </li>
@@ -105,13 +105,11 @@
 
     </section><!--/.list-topics-->
     <!--list-topics end-->
-
-    <!--works start -->
     <section id="works" class="works">
         <div class="container">
             <div class="section-header">
-                <h2>how it works</h2>
-                <p>Learn More about how our website works</p>
+                <h2>Como funciona</h2>
+                <p>Descubra como nosso site pode ajudá-lo a planejar a viagem perfeita</p>
             </div><!--/.section-header-->
             <div class="works-content">
                 <div class="row">
@@ -120,12 +118,12 @@
                             <div class="single-how-works-icon">
                                 <i class="flaticon-lightbulb-idea"></i>
                             </div>
-                            <h2><a href="#">choose <span> what to</span> do</a></h2>
+                            <h2><a href="#">Escolha <span> o que</span> fazer</a></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+                                Navegue pelas nossas categorias e escolha o que deseja fazer na sua viagem. Seja visitar um restaurante local, ficar em um hotel aconchegante ou explorar praças públicas.
                             </p>
                             <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-                                read more
+                                Saiba mais
                             </button>
                         </div>
                     </div>
@@ -134,12 +132,12 @@
                             <div class="single-how-works-icon">
                                 <i class="flaticon-networking"></i>
                             </div>
-                            <h2><a href="#">find <span> what you want</span></a></h2>
+                            <h2><a href="#">Encontre <span> o que você quer</span></a></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+                                Use nossos filtros personalizados para encontrar exatamente o que você está procurando. Nós facilitamos a busca para que você possa focar em desfrutar da sua viagem.
                             </p>
                             <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-                                read more
+                                Saiba mais
                             </button>
                         </div>
                     </div>
@@ -148,430 +146,106 @@
                             <div class="single-how-works-icon">
                                 <i class="flaticon-location-on-road"></i>
                             </div>
-                            <h2><a href="#">explore <span> amazing</span> place</a></h2>
+                            <h2><a href="#">Explore <span> lugares</span> incríveis</a></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+                                Descubra novos lugares e experiências incríveis. Nós fornecemos todas as informações que você precisa para explorar novos destinos.
                             </p>
                             <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-                                read more
+                                Saiba mais
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div><!--/.container-->
-
+    
     </section><!--/.works-->
-    <!--works end -->
+    
 
     <!--explore start -->
+
     <section id="explore" class="explore">
         <div class="container">
             <div class="section-header">
-                <h2>explore</h2>
-                <p>Explore New place, food, culture around the world and many more</p>
+                <h2>Explorar</h2>
+                <p>Explore novos lugares, comidas, e cultura em todo o nordeste.</p>
             </div><!--/.section-header-->
+            
             <div class="explore-content">
-                <div class="row">
-                    <div class=" col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="{% static 'app/assets/images/explore/e1.jpg'%} " alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">best rated</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-arrows-alt"></i>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-bookmark-o"></i>
-                                                </div>
-                                            </li>
-                                        </ul>
+
+                
+                <div class="explore-content">
+                    <div class="row">
+                        {% for local in locals %}
+                        <div class=" col-md-4 col-sm-6">
+                            <div class="single-explore-item">
+                                <div class="single-explore-img">
+                                    <img src="{{local.photo.url}} " alt="explore image">
+                                    <div class="single-explore-img-info">
+                                        <button onclick="window.location.href='#'">best rated</button>
+                                        <div class="single-explore-image-icon-box">
+                                            <ul>
+                                                <li>
+                                                    <div class="single-explore-image-icon">
+                                                        <i class="fa fa-arrows-alt"></i>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="single-explore-image-icon">
+                                                        <i class="fa fa-bookmark-o"></i>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="single-explore-txt bg-theme-1">
-                                <h2><a href="#">tommy helfinger bar</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">5.0</span>
-                                    <a href="#"> 10 ratings</a> 
-                                    <span class="explore-price-box">
-                                        form
-                                        <span class="explore-price">5$-300$</span>
-                                    </span>
-                                        <a href="#">resturent</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#">
-                                                    <img src="{% static 'app/assets/images/explore/person.png'%} " alt="explore person">
-                                                </a>
+                                <div class="single-explore-txt bg-theme-1">
+                                    <h2><a href="#">{{local.name}}</a></h2>
+                                    <p class="explore-rating-price">
+                                        <span class="explore-rating">{{local.avaliation}}</span>
+                                     
+                                        <span class="explore-price-box">
+                                            Média de preço:
+                                            <span class="explore-price">{{local.price_range}}</span>
+                                        </span>
+                                            <a href="#">{{local.category}}</a>
+                                    </p>
+                                    <div class="explore-person">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="explore-person-img">
+                                                    <a href="#">
+                                                        
+                                                        <img src="{{local.photo.url}} " alt="explore person">
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="close-btn" onclick="window.location.href='#'">close now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
+                                            <div class="col-sm-10">
+                                                <p>
+                                                    {{local.description}}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="{% static 'app/assets/images/explore/e2.jpg'%} " alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">featured</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-arrows-alt"></i>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-bookmark-o"></i>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-explore-txt bg-theme-2">
-                                <h2><a href="#">swim and dine resort</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">4.5</span>
-                                    <a href="#"> 8 ratings</a> 
-                                    <span class="explore-price-box">
-                                        form
-                                        <span class="explore-price">50$-500$</span>
-                                    </span>
-                                        <a href="#">hotel</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#">
-                                                    <img src="{% static 'app/assets/images/explore/person.png'%} " alt="explore person">
-                                                </a>
+                                    <div class="explore-open-close-part">
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <button class="close-btn" onclick="window.location.href='#'">{{local.location.city}}</button>
                                             </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="close-btn open-btn" onclick="window.location.href='#'">open now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
+                                            <div class="col-sm-7">
+                                                <div class="explore-map-icon">
+                                                    <a href="#"><i data-feather="map-pin"></i></a>
+                                                    <a href="#"><i data-feather="upload"></i></a>
+                                                    <a href="#"><i data-feather="heart"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="{% static 'app/assets/images/explore/e3.jpg'%} " alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">best rated</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-arrows-alt"></i>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-bookmark-o"></i>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-explore-txt bg-theme-3">
-                                <h2><a href="#">europe tour</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">5.0</span>
-                                    <a href="#"> 15 ratings</a> 
-                                    <span class="explore-price-box">
-                                        form
-                                        <span class="explore-price">5k$-10k$</span>
-                                    </span>
-                                        <a href="#">destination</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#">
-                                                    <img src="{% static 'app/assets/images/explore/person.png'%} " alt="explore person">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="close-btn" onclick="window.location.href='#'">close now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="{% static 'app/assets/images/explore/e4.jpg'%} " alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">most view</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-arrows-alt"></i>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-bookmark-o"></i>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-explore-txt bg-theme-4">
-                                <h2><a href="#">banglow with swiming pool</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">5.0</span>
-                                    <a href="#"> 10 ratings</a> 
-                                    <span class="explore-price-box">
-                                        form
-                                        <span class="explore-price">10k$-15k$</span>
-                                    </span>
-                                        <a href="#">real estate</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#">
-                                                    <img src="{% static 'app/assets/images/explore/person.png'%} " alt="explore person">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="close-btn" onclick="window.location.href='#'">close now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="assets/images/explore/e5.jpg" alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">featured</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-arrows-alt"></i>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-bookmark-o"></i>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-explore-txt bg-theme-2">
-                                <h2><a href="#">vintage car expo</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">4.2</span>
-                                    <a href="#"> 8 ratings</a> 
-                                    <span class="explore-price-box">
-                                        form
-                                        <span class="explore-price">500$-1200$</span>
-                                    </span>
-                                        <a href="#">automotion</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#">
-                                                    <img src="assets/images/explore/person.png" alt="explore person">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="close-btn open-btn" onclick="window.location.href='#'">open now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="assets/images/explore/e6.jpg" alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">best rated</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-arrows-alt"></i>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="single-explore-image-icon">
-                                                    <i class="fa fa-bookmark-o"></i>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-explore-txt bg-theme-5">
-                                <h2><a href="#">thailand tour</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">5.0</span>
-                                    <a href="#"> 15 ratings</a> 
-                                    <span class="explore-price-box">
-                                        form
-                                        <span class="explore-price">5k$-10k$</span>
-                                    </span>
-                                        <a href="#">destination</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#">
-                                                    <img src="assets/images/explore/person.png" alt="explore person">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="close-btn" onclick="window.location.href='#'">close now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/.container-->
+                         
+            {% endfor %}
 
     </section><!--/.explore-->
     <!--explore end -->
@@ -790,123 +464,82 @@
     </section><!--/.reviews-->
     <!--reviews end -->
 
-    <!-- statistics strat -->
-    <!--blog start -->
-    <section id="blog" class="blog" >
-        <div class="container">
-            <div class="section-header">
-                <h2>news and articles</h2>
-                <p>Always upto date with our latest News and Articles </p>
-            </div><!--/.section-header-->
-            <div class="blog-content">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-blog-item">
-                            <div class="single-blog-item-img">
-                                <img src="assets/images/blog/b1.jpg" alt="blog image">
-                            </div>
-                            <div class="single-blog-item-txt">
-                                <h2><a href="#">How to find your Desired Place more quickly</a></h2>
-                                <h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-blog-item">
-                            <div class="single-blog-item-img">
-                                <img src="assets/images/blog/b2.jpg" alt="blog image">
-                            </div>
-                            <div class="single-blog-item-txt">
-                                <h2><a href="#">How to find your Desired Place more quickly</a></h2>
-                                <h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-blog-item">
-                            <div class="single-blog-item-img">
-                                <img src="assets/images/blog/b3.jpg" alt="blog image">
-                            </div>
-                            <div class="single-blog-item-txt">
-                                <h2><a href="#">How to find your Desired Place more quickly</a></h2>
-                                <h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
-                                </p>
-                                <!-- trazendo dados do Banco de dados para o html -->
-                                {% for city in cities %}
-                                    <h1>{{ city.name }}</h1>
-                                    
-                                    {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/.container-->
-        
-    </section><!--/.blog-->
-    <!--blog end -->
-
     <!--subscription strat -->
     <section id="contact"  class="subscription">
         <div class="container">
             <div class="subscribe-title text-center">
                 <h2>
-                    do you want to add your business listing with us?
+                    CONTATO
                 </h2>
                 <p>
-                    Listrace offer you to list your business with us and we very much able to promote your Business.
+                    Djangonilo e gustavo
                 </p>
             </div>
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="subscription-input-group">
-                        <form action="#">
-                            <input type="email" class="subscription-input-form" placeholder="Enter your email here">
-                            <button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
-                                creat account
+                <div clas="collaborators">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-how-works">
+                            <div class="single-how-works-icon">
+
+                                <img src="../static/app/img/profile-pic (1) wo bg.png">
+                            </div>
+                            <h2><a href="#">Gustavo Atayde</a></h2>
+                            <p>
+                                Navegue pelas nossas categorias e escolha o que deseja fazer na sua viagem. Seja visitar um restaurante local, ficar em um hotel aconchegante ou explorar praças públicas.
+                            </p>
+                            <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                                Github
                             </button>
-                        </form>
-                    </div>
-                </div>	
+                        </div>
+                    </div>  
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-how-works">
+                            <div class="single-how-works-icon">
+
+                                <img src="../static/app/img/danilo.png">
+                            </div>
+                            <h2><a href="#">Danilo Lucena</a></h2>
+                            <p>
+                                Navegue pelas nossas categorias e escolha o que deseja fazer na sua viagem. Seja visitar um restaurante local, ficar em um hotel aconchegante ou explorar praças públicas.
+                            </p>
+                            <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                                Github
+                            </button>
+                        </div>
+                    </div>  
+
+                </div>
             </div>
         </div>
 
     </section><!--/subscription-->	
     <!--subscription end -->
 
-    <script src="assets/js/jquery.js"></script>
+    <script src="{% static 'app/assets/js/jquery.js' %}"></script>
 
     <!--modernizr.min.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
     <!--bootstrap.min.js-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{% static 'app/assets/js/bootstrap.min.js' %}"></script>
 
     <!-- bootsnav js -->
-    <script src="assets/js/bootsnav.js"></script>
+    <script src="{% static 'app/assets/js/bootsnav.js' %}"></script>
 
     <!--feather.min.js-->
-    <script  src="assets/js/feather.min.js"></script>
+    <script  src="{% static 'app/assets/js/feather.min.js' %}"></script>
 
     <!-- counter js -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
+    <script src="{% static 'app/assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'app/assets/js/waypoints.min.js' %}"></script>
 
     <!--slick.min.js-->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{% static 'app/assets/js/slick.min.js' %}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
             
 
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static 'app/assets/js/custom.js' %}"></script>
     {% endblock  %}
 </div>
 

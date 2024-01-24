@@ -59,3 +59,16 @@ def register_view(request):
         user_form = NossoForm()
 
     return render(request,'register.html', {'user_form': user_form})
+
+
+def account_view(request):
+
+    user = User.objects.acount()
+    
+
+
+    return render(request,'account.html',{user})
+
+def logout_view(request):
+    User.logout
+    return render(request, 'landing_page.html',{})

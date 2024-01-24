@@ -387,9 +387,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .works-content {margin-top: 73px;}
 
 .single-how-works{
+    display: flex;
+    align-items: center;
     text-align: center;
     padding:50px 42px;
-    border-radius: 3px;
+    border-radius: 25px;
     box-shadow: 0 0px 5px rgba(71,71,71,.2);
     margin-bottom: 30px;
     -webkit-transition: .3s linear; 
