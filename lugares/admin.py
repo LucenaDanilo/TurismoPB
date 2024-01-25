@@ -16,8 +16,8 @@ class CityAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 
 class LocationAdmin(admin.ModelAdmin):
-    list_display = ('latitude', 'longitude', 'city')
-    search_fields = ('city',)
+    list_display = ('logradouro',)
+    search_fields = ('logradouro',)
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('telephone', 'email')

@@ -45,10 +45,11 @@ class City(models.Model):
 
 class Location(models.Model):
     id = models.AutoField(primary_key=True)
-    rua = models.CharField(max_length=200)
-    latitude = models.CharField(max_length=200)
-    longitude = models.CharField(max_length=200)
-    city = models.ForeignKey(City, on_delete=models.PROTECT, related_name='city')
+    logradouro = models.CharField(max_length=200,null=True, blank=True)
+    bairro = models.CharField(max_length=200,null=True, blank=True)
+    localidade = models.CharField(max_length=200,null=True, blank=True)
+    uf = models.CharField(max_length=200,null=True, blank=True)
+    cep = models.CharField(max_length=200,null=True, blank=True)
 
     def __str__(self):
         return self.rua
