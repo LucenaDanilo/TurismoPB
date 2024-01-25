@@ -14,90 +14,78 @@
 
             </div><!--/.section-header-->
 
-            {% for local in locals %}
-                <div class="explore-content">
-                    <div class="row">
-                        <div class=" col-md-4 col-sm-6">
-                            <div class="single-explore-item">
-                                <div class="single-explore-img">
-                                    <img src="{{local.photo.url}} " alt="explore image">
-                                    <div class="single-explore-img-info">
-                                        <button onclick="window.location.href='#'">best rated</button>
-                                        <div class="single-explore-image-icon-box">
-                                            <ul>
-                                                <li>
-                                                    <div class="single-explore-image-icon">
-                                                        <i class="fa fa-arrows-alt"></i>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="single-explore-image-icon">
-                                                        <i class="fa fa-bookmark-o"></i>
-                                                    </div>
-                                                </li>
-                                            </ul>
+            <div class="explore-content">
+                <div class="row">
+                    {% for local in locals %}
+                    <div class=" col-md-4 col-sm-6">
+                        <div class="single-explore-item">
+                            <div class="single-explore-img">
+                                <img src="{{local.photo.url}} " alt="explore image">
+                                <div class="single-explore-img-info">
+                                    <button onclick="window.location.href='#'">best rated</button>
+                                    <div class="single-explore-image-icon-box">
+                                        <ul>
+                                            <li>
+                                                <div class="single-explore-image-icon">
+                                                    <i class="fa fa-arrows-alt"></i>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="single-explore-image-icon">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-explore-txt bg-theme-1">
+                                <h2><a href="#">{{local.name}}</a></h2>
+                                <p class="explore-rating-price">
+                                    <span class="explore-rating">{{local.avaliation}}/5,0</span>
+                                 
+                                    <span class="explore-price-box">
+                                        Média de preço:
+                                        <span class="explore-price">{{local.price_range}}</span>
+                                    </span>
+                                        <a href="#">{{local.category}}</a>
+                                </p>
+                                <div class="explore-person">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="explore-person-img">
+                                                <a href="#">
+                                                    
+                                                    <img src="{{local.photo.url}} " alt="explore person">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <p>
+                                                {{local.description}}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="single-explore-txt bg-theme-1">
-                                    <h2><a href="#">{{local.name}}</a></h2>
-                                    <p class="explore-rating-price">
-                                        <span class="explore-rating">{{local.avaliation}}</span>
-                                     
-                                        <span class="explore-price-box">
-                                            Média de preço:
-                                            <span class="explore-price">{{local.price_range}}</span>
-                                        </span>
-                                            <a href="#">{{local.category}}</a>
-                                    </p>
-                                    <div class="explore-person">
-                                        <div class="row">
-                                            <div class="col-sm-2">
-                                                <div class="explore-person-img">
-                                                    <a href="#">
-                                                        
-                                                        <img src="{{local.photo.url}} " alt="explore person">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <p>
-                                                    {{local.description}}
-                                                </p>
-                                            </div>
+                                <div class="explore-open-close-part">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <button class="close-btn" onclick="window.location.href='#'">{{local.location.localidade}}</button>
                                         </div>
-                                    </div>
-                                    <div class="explore-open-close-part">
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <button class="close-btn" onclick="window.location.href='#'">{{local.contact}}</button>
-                                            </div>
-                                            <div class="col-sm-7">
-                                                <div class="explore-map-icon">
-                                                    <a href="#"><i data-feather="map-pin"></i></a>
-                                                    <a href="#"><i data-feather="upload"></i></a>
-                                                    <a href="#"><i data-feather="heart"></i></a>
-                                                </div>
+                                        <div class="col-sm-7">
+                                            <div class="explore-map-icon">
+                                                <a href="#"><i data-feather="map-pin"></i></a>
+                                                <a href="#"><i data-feather="upload"></i></a>
+                                                <a href="#"><i data-feather="heart"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-                         
-            {% endfor %}
+                    </div>
+                     
+        {% endfor %}
             
         </div><!--/.container-->
 

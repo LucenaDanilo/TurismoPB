@@ -52,7 +52,7 @@ class Location(models.Model):
     cep = models.CharField(max_length=200,null=True, blank=True)
 
     def __str__(self):
-        return self.rua
+        return self.localidade
      
 
 class Contact(models.Model):
@@ -69,7 +69,6 @@ class Local(models.Model):
     name = models.CharField(max_length=200)
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name='category_name')
     location = models.ForeignKey(Location, on_delete=models.PROTECT, related_name='local_location',null=True, blank=True)
-    cep = models.IntegerField(null=True, blank=True)
     contact = models.ForeignKey(Contact, on_delete=models.PROTECT, related_name='local_contact', null=True, blank=True)
     description = models.CharField(max_length=200, blank=True, null=True)
     avaliation = models.FloatField(blank=True, null=True)

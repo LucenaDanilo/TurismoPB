@@ -16,9 +16,23 @@ class AddlocalForm(forms.Form):
     photo = forms.ImageField()
     
 
+    def clean_avaliation(self):
+        avaliation = self.cleaned_data['avaliation']
+        if avaliation < 1 or avaliation > 5:
+            self.add_error('avaliation', 'A avaliaçao deve estar entre 1 e 5')
+        return avaliation
     
+    def clean_cep(self):
+        cep = self.cleaned_data['cep']
+        cep.replace('-','')
+
+        if len(cep) != 8:
+            self.add_error('cep', 'Digite um cep válido')
+        return cep
 
     def save(self):
+
+
         def busca_endereco(cep):
             cep.replace('-','')
             response = requests.get(f'https://viacep.com.br/ws/{cep}/json/')
@@ -48,3 +62,9 @@ class AddlocalForm(forms.Form):
         
         local.save()
         return local
+    
+
+class AddlocalModelForm(forms.ModelForm):
+    def meta():
+        model = Local
+        fields = '__all__'

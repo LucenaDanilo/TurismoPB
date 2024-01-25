@@ -54,7 +54,7 @@ def cities_view(request):
 
     search = request.GET.get('search')
     if search:
-        locals = Local.objects.filter(location__city__name__icontains=search)
+        locals = Local.objects.filter(location__localidade__icontains=search)
 
     return render(request,'lugares.html', {'locals': locals})
 
