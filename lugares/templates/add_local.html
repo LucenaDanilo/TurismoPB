@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{%block content%}
+
+
+<form method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <table>
+        {{add_local_form.as_table}}
+    </table>
+    
+
+    <button type="submit" value="Adicionar" class="btn btn-primary">
+        Adicionar
+    </button>
+
+
+</form>
+
+
+{% endblock%}

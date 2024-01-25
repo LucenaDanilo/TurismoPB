@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from lugares.views import base_test_view, landing_page_view,lugares_view,cities_view
+from lugares.views import base_test_view, landing_page_view,lugares_view,cities_view, add_local_view
 from accounts.views import login_view,register_view, account_view,logout_view
 from django.conf import settings
 from django.conf.urls.static import static
@@ -30,5 +30,6 @@ urlpatterns = [
     path('lugares/',lugares_view, name='lugares_view'),
     path('cities/',cities_view, name='cities_view'),
     path('account/', account_view,name='account_view'),
-    path('logout/',logout_view,name='logout_view')
+    path('logout/',logout_view,name='logout_view'),
+    path('add_local/',add_local_view,name='add_local_view')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

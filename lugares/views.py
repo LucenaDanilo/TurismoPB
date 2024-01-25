@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from lugares.models import City, Local,Location,Contact
+from app.Forms import AddlocalForm
 
 # Create your views here.
 
@@ -59,15 +60,22 @@ def cities_view(request):
 
 
 
+def add_local_view(request):
+    
+
+    if request.method == "POST":
+        add_local_form = AddlocalForm(request.POST, request.FILES)
+
+        if add_local_form.is_valid():
+            add_local_form.save()
+            return redirect('landing_page_view')
+        
+
+    else:
+        add_local_form = AddlocalForm()
+    
+    return render(request,'add_local.html',{'add_local_form': add_local_form})
 
 
 
 
-
-    cities = City.objects.all()
-
-    search = request.GET.get('search')
-    if search:
-        cities = Local.objects.filter(location__city__name__icontains=search)
-
-    return render(request,'cities.html', {'cities': cities})
