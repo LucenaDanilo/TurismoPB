@@ -52,7 +52,7 @@ class Location(models.Model):
     cep = models.CharField(max_length=200,null=True, blank=True)
 
     def __str__(self):
-        return self.localidade
+        return self.localidade 
      
 
 class Contact(models.Model):

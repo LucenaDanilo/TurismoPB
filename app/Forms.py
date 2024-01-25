@@ -26,7 +26,7 @@ class AddlocalForm(forms.Form):
         cep = self.cleaned_data['cep']
         cep.replace('-','')
 
-        if len(cep) != 8:
+        if len(cep) != 8 or cep.isnumeric() == False:
             self.add_error('cep', 'Digite um cep válido')
         return cep
 

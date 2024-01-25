@@ -70,5 +70,5 @@ def account_view(request):
     return render(request,'account.html',{user})
 
 def logout_view(request):
-    User.logout
-    return render(request, 'landing_page.html',{})
+    logout(request)
+    return redirect('landing_page_view')
