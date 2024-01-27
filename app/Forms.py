@@ -1,10 +1,14 @@
 from django import forms
 from lugares.models import Local,City, State, Contact, Location, Category
+from django.contrib.auth.models import User
 import requests
 
 
 
-
+class AdduserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name','last_name','username','email','phone','password']
 
 class AddlocalForm(forms.Form):
     name = forms.CharField(max_length=200)

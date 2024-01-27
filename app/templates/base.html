@@ -82,13 +82,16 @@
             <li class="head-responsive-right pull-right">
                 <div class="header-top-right">
                     <ul>
+                        <li>Olá,  <strong>{{user.username}}</strong></li>
                         <!-- Aqui você pode colocar links para perfis de usuários ou sair -->
                         <li class="header-top-contact">
-                            <a href="{% url 'lugares_view' %}">Perfil</a>
+                            <a href="{% url 'account_view' %}">Perfil</a>
                         </li>
                         <li class="header-top-contact">
                             <a href="{% url 'logout_view' %}">Sair</a>
                             </form>
+
+                        
                         </li>
                     </ul>
                 </div>

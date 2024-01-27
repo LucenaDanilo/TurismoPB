@@ -1,12 +1,12 @@
 {% load static %}
 
 {% block content %}
+    
 
     <link rel="stylesheet" type="text/css" href="{% static 'app/css/style_login.css' %}">
 
     <form method="post">
         {% csrf_token %}
-        
         <div class="screen-1">
           <div class='logo_area'>
             <img src="{% static 'app/images/carrefourlogo.jpeg' %}" alt="logo" class="logo-image">

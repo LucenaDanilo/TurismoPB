@@ -52,15 +52,7 @@
                                 <i class="flaticon-restaurant"></i>
                             </div>
                             <h2><a href="#">Restaurante</a></h2>
-                            {% with restaurant_counter=0 %}
-                                {% for local in locals %}
-                                    {% if local.category == "Restaurantes" %}
-                                        {% with restaurant_counter=restaurant_counter|add:1 %}
-                                        {% endwith %}
-                                    {% endif %}
-                                {% endfor %}
-                                <p>{{ restaurant_counter }} Restaurantes</p>
-                            {% endwith %}
+                            <p>{{ restaurant_counter }} Restaurantes</p>
                         </div>
                     </li>
                     <li>
@@ -68,7 +60,7 @@
                             <div class="single-list-topics-icon">
                                 <i class="flaticon-travel"></i>
                             </div>
-                            <h2><a href="#">Destinos</a></h2>
+                            <h2><a href="#">Museus</a></h2>
                             <p>214 listings</p>
                         </div>
                     </li>
@@ -86,7 +78,7 @@
                             <div class="single-list-topics-icon">
                                 <i class="flaticon-pills"></i>
                             </div>
-                            <h2><a href="#">Cuidados</a></h2>
+                            <h2><a href="#">Natureza</a></h2>
                             <p>200 listings</p>
                         </div>
                     </li>
@@ -95,7 +87,7 @@
                             <div class="single-list-topics-icon">
                                 <i class="flaticon-transport"></i>
                             </div>
-                            <h2><a href="#">Autos</a></h2>
+                            <h2><a href="#">Cultura</a></h2>
                             <p>120 listings</p>
                         </div>
                     </li>
@@ -122,9 +114,9 @@
                             <p>
                                 Navegue pelas nossas categorias e escolha o que deseja fazer na sua viagem. Seja visitar um restaurante local, ficar em um hotel aconchegante ou explorar praças públicas.
                             </p>
-                            <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                            {% comment %} <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
                                 Saiba mais
-                            </button>
+                            </button> {% endcomment %}
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
@@ -136,9 +128,9 @@
                             <p>
                                 Use nossos filtros personalizados para encontrar exatamente o que você está procurando. Nós facilitamos a busca para que você possa focar em desfrutar da sua viagem.
                             </p>
-                            <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                            {% comment %} <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
                                 Saiba mais
-                            </button>
+                            </button> {% endcomment %}
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
@@ -148,11 +140,11 @@
                             </div>
                             <h2><a href="#">Explore <span> lugares</span> incríveis</a></h2>
                             <p>
-                                Descubra novos lugares e experiências incríveis. Nós fornecemos todas as informações que você precisa para explorar novos destinos.
+                                Descubra novos lugares e experiências incríveis. Nós fornecemos todas as informações que você precisa para explorar novos destinos.<br><br>
                             </p>
-                            <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                            {% comment %} <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
                                 Saiba mais
-                            </button>
+                            </button> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -206,7 +198,7 @@
                                      
                                         <span class="explore-price-box">
                                             Média de preço:
-                                            <span class="explore-price">{{local.price_range}}</span>
+                                            <span class="explore-price"> R$ {{local.price_range}}</span>
                                         </span>
                                             <a href="#">{{local.category}}</a>
                                     </p>
@@ -488,6 +480,7 @@
                                 Navegue pelas nossas categorias e escolha o que deseja fazer na sua viagem. Seja visitar um restaurante local, ficar em um hotel aconchegante ou explorar praças públicas.
                             </p>
                             <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                                <a href="https://github.com/gustavo-ataide">
                                 Github
                             </button>
                         </div>
@@ -503,6 +496,7 @@
                                 Navegue pelas nossas categorias e escolha o que deseja fazer na sua viagem. Seja visitar um restaurante local, ficar em um hotel aconchegante ou explorar praças públicas.
                             </p>
                             <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                                <a href="https://github.com/LucenaDanilo">
                                 Github
                             </button>
                         </div>

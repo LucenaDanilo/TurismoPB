@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate,login, logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+from app.Forms import AdduserForm
 
 # Create your views here.
 class NossoForm(UserCreationForm):
@@ -62,13 +63,28 @@ def register_view(request):
 
 
 def account_view(request):
-
-    user = User.objects.acount()
-    
-
-
-    return render(request,'account.html',{user})
+    return render(request,'account.html',{'user':request.user})
 
 def logout_view(request):
     logout(request)
     return redirect('landing_page_view')
+
+# def forgotpassword_view(request):
+#     senha = enviarcodigo()
+#     return redirect('landing_page_view')
+
+def register_view(request):
+    
+
+    if request.method == "POST":
+        add_user_form = AdduserForm(request.POST, request.FILES)
+
+        if add_user_form.is_valid():
+            add_user_form.save()
+            return redirect('landing_page_view')
+        
+
+    else:
+        add_user_form = AdduserForm()
+    
+    return render(request,'register.html',{'AdduserForm': AdduserForm})

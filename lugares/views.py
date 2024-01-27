@@ -9,25 +9,25 @@ def landing_page_view(request):
     #puxa todas as cidades do Banco de dados
     locals = Local.objects.all()
     
-    
+    restaurant_counter = len(Local.objects.filter(category__name='Restaurantes'))
+    hotel_counter = len(Local.objects.filter(category__name='Hotel'))
+    hotel_counter = len(Local.objects.filter(category__name='Natureza'))
     #filtrando por propriedade
     # pernambuco = City.objects.filter(state__name="PE")
 
     #filtrando usando fucao ex: contains
     # joao_pessoa = City.objects.filter(name__contains = "Joao")
-
+    
 
     #requisicao do usuario (url)
     search = request.GET.get('search')
+    
     
     # if search != None:
     #     user_search = City.objects.filter(name__icontains = search) #contains(case sensitive) icontains(not case sensitive)
     #     return render(request, 'landing_page.html', {'cities': user_search})
     # else:
-    return render(request, 'landing_page.html', {'locals': locals})
-    
-
-
+    return render(request, 'landing_page.html', {'locals': locals, 'restaurant_counter':restaurant_counter})
 
 def base_test_view(request):
     return render(request, 'base_test.html', {})

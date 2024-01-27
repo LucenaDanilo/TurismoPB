@@ -31,5 +31,6 @@ urlpatterns = [
     path('cities/',cities_view, name='cities_view'),
     path('account/', account_view,name='account_view'),
     path('logout/',logout_view,name='logout_view'),
-    path('add_local/',add_local_view,name='add_local_view')
+    path('add_local/',add_local_view,name='add_local_view'),
+    # path('forgotpassword/',forgotpassword_view, name='forgotpassword_view')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

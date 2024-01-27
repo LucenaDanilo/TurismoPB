@@ -17,8 +17,10 @@
 
     </form>
 {% else %}
-    <h1>FACA LOGIN PARA CONTINUAR</h1>
-    <a href="{% url 'login_view' %}">Login</a>
+    <h1>FACA LOGIN PARA ADICIONAR CARROS</h1>
+    <button type="submit" value="Adicionar" class="btn btn-primary">
+        <a href="{% url 'login_view' %}">Login</a>
+    </button>
 
 {% endif %}
 
