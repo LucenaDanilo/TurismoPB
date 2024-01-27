@@ -82,7 +82,10 @@
             <li class="head-responsive-right pull-right">
                 <div class="header-top-right">
                     <ul>
-                        <li>Olá,  <strong>{{user.username}}</strong></li>
+                        <li>
+                            <a href="{% url 'account_view' %}">Olá,  <strong>{{user.username}}</strong></a>
+                            
+                        </li>
                         <!-- Aqui você pode colocar links para perfis de usuários ou sair -->
                         <li class="header-top-contact">
                             <a href="{% url 'account_view' %}">Perfil</a>

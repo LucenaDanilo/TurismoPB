@@ -9,9 +9,11 @@ def landing_page_view(request):
     #puxa todas as cidades do Banco de dados
     locals = Local.objects.all()
     
-    restaurant_counter = len(Local.objects.filter(category__name='Restaurantes'))
-    hotel_counter = len(Local.objects.filter(category__name='Hotel'))
-    hotel_counter = len(Local.objects.filter(category__name='Natureza'))
+    restaurant_counter = len(Local.objects.filter(category__name__icontains='Restaurantes'))
+    hotel_counter = len(Local.objects.filter(category__name__icontains='Hotel'))
+    natureza_counter = len(Local.objects.filter(category__name__icontains='Natureza'))
+    cultura_counter = len(Local.objects.filter(category__name__icontains='Cultura'))
+    museu_counter = len(Local.objects.filter(category__name__icontains='Museus'))
     #filtrando por propriedade
     # pernambuco = City.objects.filter(state__name="PE")
 
@@ -20,14 +22,13 @@ def landing_page_view(request):
     
 
     #requisicao do usuario (url)
-    search = request.GET.get('search')
     
     
     # if search != None:
     #     user_search = City.objects.filter(name__icontains = search) #contains(case sensitive) icontains(not case sensitive)
     #     return render(request, 'landing_page.html', {'cities': user_search})
     # else:
-    return render(request, 'landing_page.html', {'locals': locals, 'restaurant_counter':restaurant_counter})
+    return render(request, 'landing_page.html', {'locals': locals, 'restaurant_counter':restaurant_counter,'hotel_counter':hotel_counter,'natureza_counter':natureza_counter,'cultura_counter':cultura_counter,'museu_counter':museu_counter})
 
 def base_test_view(request):
     return render(request, 'base_test.html', {})
