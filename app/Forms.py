@@ -34,7 +34,7 @@ class AddlocalForm(forms.Form):
             self.add_error('cep', 'Digite um cep válido')
         return cep
 
-    def save(self):
+    def save(self,user):
 
 
         def busca_endereco(cep):
@@ -62,6 +62,7 @@ class AddlocalForm(forms.Form):
             avaliation = self.cleaned_data['avaliation'],
             price_range = self.cleaned_data['price_range'],
             photo = self.cleaned_data['photo'],
+            user = user,
         )
         
         local.save()

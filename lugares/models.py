@@ -75,6 +75,7 @@ class Local(models.Model):
     comments = models.CharField(max_length=200, blank=True, null=True)
     price_range = models.IntegerField(blank=True, null=True)
     photo = models.ImageField(upload_to='lugares/', blank=True, null=True)
+    user = models.CharField(max_length=200,blank=True, null=True)
     # opening_hours =
 
     def __str__(self) -> str:

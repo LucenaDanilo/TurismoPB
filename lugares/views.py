@@ -67,7 +67,7 @@ def add_local_view(request):
         add_local_form = AddlocalForm(request.POST, request.FILES)
 
         if add_local_form.is_valid():
-            add_local_form.save()
+            add_local_form.save(request.user.username)
             return redirect('landing_page_view')
         
 

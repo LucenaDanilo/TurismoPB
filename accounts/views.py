@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from app.Forms import AdduserForm
+from lugares.models import Local
 
 # Create your views here.
 class NossoForm(UserCreationForm):
@@ -63,7 +64,9 @@ def register_view(request):
 
 
 def account_view(request):
-    return render(request,'account.html',{'user':request.user})
+    user_locals = Local.objects.filter(user=request.user.username)
+    counter = len(user_locals)
+    return render(request,'account.html',{'user':request.user,'user_locals':user_locals, 'counter':counter})
 
 def logout_view(request):
     logout(request)
@@ -88,3 +91,7 @@ def register_view(request):
         add_user_form = AdduserForm()
     
     return render(request,'register.html',{'AdduserForm': AdduserForm})
+
+def user_locals_view(request):
+    locals = Local.objects.filter(user=request.user.username)
+    return render(request,'lugares.html', {'locals': locals})

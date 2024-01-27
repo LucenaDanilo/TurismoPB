@@ -96,16 +96,17 @@
                 <p>Telefone: {{user.phone}}</p>
                 <a href="#">Editar</a>
             </div>
-            {% comment %} <div class="card">
-                <h2>Minhas Viagens</h2>
-                <p>Você tem 3 viagens reservadas:</p>
+            <div class="card">
+                <h2>Meus locais</h2>
+                <p>Você tem {{counter}} locais adicionados:</p>
                 <ul>
-                    <li>Rio de Janeiro - 10/02/2024 a 15/02/2024</li>
-                    <li>Salvador - 20/03/2024 a 25/03/2024</li>
-                    <li>Fortaleza - 05/04/2024 a 10/04/2024</li>
+                    {% for local in user_locals %}                
+                    <li>{{local.name}} - {{local.location.localidade}}</li>
+                    {% endfor %}
                 </ul>
-                <a href="#">Ver mais</a>
-            </div> {% endcomment %}
+                <form method="GET" action="{% url 'user_locals_view' %}" >
+                <a name="search">Ver mais</a>
+            </div>
         </div>
         <div class="footer">
             <p>Todos os direitos reservados © 2024</p>
