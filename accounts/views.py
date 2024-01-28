@@ -12,15 +12,15 @@ class NossoForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ("username", "email",)
-
+        fields = ("username", "email")
+    
     def save(self, commit=True):
         user = super(NossoForm, self).save(commit=False)
         user.email = self.cleaned_data["email"]
         if commit:
             user.save()
         return user
-    
+
 def login_view(request):
 
     if request.method == 'POST':
@@ -76,21 +76,21 @@ def logout_view(request):
 #     senha = enviarcodigo()
 #     return redirect('landing_page_view')
 
-def register_view(request):
+# def register_view(request):
     
 
-    if request.method == "POST":
-        add_user_form = AdduserForm(request.POST, request.FILES)
+#     if request.method == "POST":
+#         add_user_form = AdduserForm(request.POST, request.FILES)
 
-        if add_user_form.is_valid():
-            add_user_form.save()
-            return redirect('landing_page_view')
+#         if add_user_form.is_valid():
+#             add_user_form.save()
+#             return redirect('landing_page_view')
         
 
-    else:
-        add_user_form = AdduserForm()
+#     else:
+#         add_user_form = AdduserForm()
     
-    return render(request,'register.html',{'AdduserForm': AdduserForm})
+#     return render(request,'register.html',{'AdduserForm': AdduserForm})
 
 def user_locals_view(request):
     locals = Local.objects.filter(user=request.user.username)
