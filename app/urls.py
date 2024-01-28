@@ -20,6 +20,7 @@ from lugares.views import base_test_view, landing_pageView,lugares_view,cities_v
 from accounts.views import login_view,register_view, account_view,logout_view, user_locals_view, PasswordResetClass
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
 urlpatterns = [
     path('', landing_pageView.as_view(), name = 'landing_page_view'),
@@ -33,5 +34,9 @@ urlpatterns = [
     path('logout/',logout_view,name='logout_view'),
     path('add_local/',add_localView.as_view(),name='add_local_view'),
     path('user_locals/',user_locals_view,name='user_locals_view'),
-    path('forgot_password/', PasswordResetClass.as_view(), name='forgot_password_view')
+    path('forgot_password/', PasswordResetClass.as_view(), name='forgot_password_view'),
+    path('reset_password/', PasswordResetView.as_view(), name='password_reset'),
+    path('reset_password/done/', PasswordResetDoneView.as_view(), name='password_reset_done'),
+    path('reset_password/<uidb64>/<token>/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('reset_password/complete/', PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
