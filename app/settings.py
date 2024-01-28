@@ -132,6 +132,8 @@ MEDIA_URL = '/media/'
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+DEFAULT_FROM_EMAIL = 'gugaben903@gmail.com'
+SERVER_EMAIL = 'gugaben903@gmail.com'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
