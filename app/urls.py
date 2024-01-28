@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from lugares.views import base_test_view, landing_page_view,lugares_view,cities_view, add_local_view
+from lugares.views import base_test_view, landing_pageView,lugares_view,cities_view, add_localView
 from accounts.views import login_view,register_view, account_view,logout_view,user_locals_view
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', landing_page_view, name = 'landing_page_view'),
+    path('', landing_pageView.as_view(), name = 'landing_page_view'),
     path('admin/', admin.site.urls),
     path('base/',base_test_view,name='base_test_view'),
     path('login/',login_view, name='login_view'),
@@ -31,7 +31,7 @@ urlpatterns = [
     path('cities/',cities_view, name='cities_view'),
     path('account/', account_view,name='account_view'),
     path('logout/',logout_view,name='logout_view'),
-    path('add_local/',add_local_view,name='add_local_view'),
+    path('add_local/',add_localView.as_view(),name='add_local_view'),
     path('user_locals/',user_locals_view,name='user_locals_view'),
     # path('forgotpassword/',forgotpassword_view, name='forgotpassword_view')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
