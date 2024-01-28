@@ -3,8 +3,10 @@ from django.contrib.auth import authenticate,login, logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.views import PasswordResetView
 from app.Forms import AdduserForm
 from lugares.models import Local
+from django.urls import reverse_lazy
 
 # Create your views here.
 class NossoForm(UserCreationForm):
@@ -76,22 +78,17 @@ def logout_view(request):
 #     senha = enviarcodigo()
 #     return redirect('landing_page_view')
 
-# def register_view(request):
-    
-
-#     if request.method == "POST":
-#         add_user_form = AdduserForm(request.POST, request.FILES)
-
-#         if add_user_form.is_valid():
-#             add_user_form.save()
-#             return redirect('landing_page_view')
-        
-
-#     else:
-#         add_user_form = AdduserForm()
-    
-#     return render(request,'register.html',{'AdduserForm': AdduserForm})
 
 def user_locals_view(request):
     locals = Local.objects.filter(user=request.user.username)
     return render(request,'lugares.html', {'locals': locals})
+
+
+class PasswordResetClass(PasswordResetView):
+    email_template_name = 'forgot_password.html'
+    success_url = reverse_lazy('login_view')
+
+    def get(self, request):
+        return render(request, 'forgot_password.html', {'form_forgot_password': super().form_class})
+
+

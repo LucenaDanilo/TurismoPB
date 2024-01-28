@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from lugares.views import base_test_view, landing_pageView,lugares_view,cities_view, add_localView
-from accounts.views import login_view,register_view, account_view,logout_view,user_locals_view
+from accounts.views import login_view,register_view, account_view,logout_view, user_locals_view, PasswordResetClass
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -33,5 +33,5 @@ urlpatterns = [
     path('logout/',logout_view,name='logout_view'),
     path('add_local/',add_localView.as_view(),name='add_local_view'),
     path('user_locals/',user_locals_view,name='user_locals_view'),
-    # path('forgotpassword/',forgotpassword_view, name='forgotpassword_view')
+    path('forgot_password/', PasswordResetClass.as_view(), name='forgot_password_view')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

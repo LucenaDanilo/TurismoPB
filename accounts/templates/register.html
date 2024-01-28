@@ -49,9 +49,12 @@
           </div>
 
             <button class="login">Registrar </button>
-            <div class="footer"><span>Login</span><span>Esqueceu sua senha?</span></div>
+            <div class="footer">
+              <span>Login</span>
+              <a href="{% url 'forgot_password_view' %}"><span>Esqueceu sua senha?</span></a>
+            </div>
         </div>
 
     </form>
 
-  {% endblock  %}
+{% endblock  %}
