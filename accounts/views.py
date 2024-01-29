@@ -85,7 +85,7 @@ def user_locals_view(request):
 
 
 class PasswordResetClass(PasswordResetView):
-    email_template_name = 'forgot_password.html'
+    # email_template_name = 'forgot_password.html'
     success_url = reverse_lazy('login_view')
 
     def get(self, request):

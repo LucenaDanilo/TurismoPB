@@ -34,7 +34,6 @@ urlpatterns = [
     path('logout/',logout_view,name='logout_view'),
     path('add_local/',add_localView.as_view(),name='add_local_view'),
     path('user_locals/',user_locals_view,name='user_locals_view'),
-    path('forgot_password/', PasswordResetClass.as_view(), name='forgot_password_view'),
     path('reset_password/', PasswordResetView.as_view(), name='password_reset'),
     path('reset_password/done/', PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset_password/<uidb64>/<token>/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
