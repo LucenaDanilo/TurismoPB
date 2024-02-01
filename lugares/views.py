@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from lugares.models import City, Local,Location,Contact
 from app.Forms import AddlocalForm
 from django.views import View
-from django.views.generic import ListView
+from django.views.generic import ListView,CreateView
 
 # Create your views here.
 
@@ -32,18 +32,20 @@ def register_test_view(request):
 
 
 
-def lugares_view(request):
 
-    locals = Local.objects.all()
 
-    search = request.GET.get('search')
-    if search:
-        locals = Local.objects.filter(category__name__icontains=search)
-
-    return render(request,'lugares.html', {'locals': locals})
-
-# class lugaresView(ListView):
-#     model = Local
+class lugaresView(ListView):
+    model = Local
+    template_name = 'lugares.html'
+    context_object_name = 'locals'
+    
+    def get_queryset(self):
+        locals = super().get_queryset().order_by('location__localidade')
+        search = self.request.GET.get('search')
+        if search:
+            locals = locals.filter(category__name__icontains = search)
+        
+        return locals
 
 
 def cities_view(request):
@@ -58,7 +60,7 @@ def cities_view(request):
 
 
 
-class add_localView(View):
+class add_localView(CreateView):    
     def get(self, request):
         add_local_form = AddlocalForm()
         return render(request,'add_local.html',{'add_local_form': add_local_form})
